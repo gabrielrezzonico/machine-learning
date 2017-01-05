@@ -11867,6 +11867,8 @@ div#notebook {
 <p><img src="img/sim_0.png" alt="title"></p>
 <p>Positive reward:
 <img src="img/sim_1.png" alt="title"></p>
+<p>There is a 3rd case, negative reward because of right-of-way violation:
+<img src="img/sim_2.png" alt="title"></p>
 
 </div>
 </div>
@@ -13742,7 +13744,7 @@ kiQNxP8HrR/XcXp3Tb4AAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>The features "light" makes a lot of sense, the agent needs to know this for sure. In the same way "oncoming" is useful information, mainly because the agent this need to avoid accidents. Another useful feature is "waypoint", because the agent needs to know where to go. "light" and "oncoming" are useful to learn abour "safety" and "waypoint" is useful for "efficiency".</p>
-<p>At first glance "deadline" seems important, but actually is not, the agent can not do much about this, I mean the agent is not going to cross a red light only to make it on time.</p>
+<p>At first glance "deadline" seems important, but actually is not, the agent can not do much about this, I mean the agent is not going to cross a red light only to make it on time. Altought "left" and "right" seems useful, We are not going to use them because of the added complexity, with these features is going to be difficult to train the agent in my computer.</p>
 
 </div>
 </div>
@@ -13784,6 +13786,7 @@ oncoming = [None, 'left', 'right', 'forward']</code></pre>
 <p>Therefore, the size of the state space is:</p>
 
 <pre><code>3 x 2 x 4 = 24</code></pre>
+<p>The agent is going to be able to learn a policy with only these number of states.</p>
 
 </div>
 </div>
